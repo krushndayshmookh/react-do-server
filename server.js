@@ -184,6 +184,24 @@ app.delete('/todos/:id', validateToken, async (req, res) => {
   }
 })
 
+app.delete('/admin/todos', async (req, res) => {
+  try {
+    await Todo.deleteMany()
+    res.send('Todos deleted')
+  } catch (error) {
+    res.status(400).send(error)
+  }
+})
+
+app.delete('/admin/users', async (req, res) => {
+  try {
+    await User.deleteMany()
+    res.send('Users deleted')
+  } catch (error) {
+    res.status(400).send(error)
+  }
+})
+
 app.listen(process.env.PORT, () => {
   console.log(`Server is running on port ${process.env.PORT}`)
 })

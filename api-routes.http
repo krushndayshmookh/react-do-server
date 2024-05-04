@@ -1,5 +1,7 @@
-@domain=http://localhost:3000
-@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjM0ODEwOTYxOTUzNjA0MGY4MWQwYmMiLCJ1c2VybmFtZSI6ImtydXNobiIsImlhdCI6MTcxNDcxNjk0MX0.7oVRZME8AgZOLIsiX8stoHDNTXEYMjXZ17rl6bzXNK4
+# @domain=http://localhost:3000
+@domain=react-do-server-production.up.railway.app
+# @token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjM0ODEwOTYxOTUzNjA0MGY4MWQwYmMiLCJ1c2VybmFtZSI6ImtydXNobiIsImlhdCI6MTcxNDcxNjk0MX0.7oVRZME8AgZOLIsiX8stoHDNTXEYMjXZ17rl6bzXNK4
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjM0ODU0MzY1OGZhODQzMWFmNGM3N2YiLCJ1c2VybmFtZSI6ImtydXNobiIsImlhdCI6MTcxNDcxODAyOX0.ZbwhdE2V4XiRklfNlBmzVlvI_8rLQwJhWnJfxmMQ0IM
 ###
 POST {{domain}}/auth/sign-up HTTP/1.1
 Content-Type: application/json
@@ -68,5 +70,15 @@ Authorization: Bearer {{token}}
 DELETE {{domain}}/todos/66347fd1cd41a85690f2edd5 HTTP/1.1
 Content-Type: application/json
 Authorization: Bearer {{token}}
+
+###
+
+### Admin
+
+DELETE {{domain}}/admin/todos HTTP/1.1
+
+###
+
+DELETE {{domain}}/admin/users HTTP/1.1
 
 ###

@@ -35,6 +35,9 @@ const Todo = mongoose.model('Todo', {
 // middlewares
 
 const validateToken = (req, res, next) => {
+  if(!req.headers['authorization']) {
+    return res.status(401).send('Token is required')
+  }
   const token = req.headers['authorization'].split(' ')[1]
   if (!token) {
     return res.status(401).send('Token is required')

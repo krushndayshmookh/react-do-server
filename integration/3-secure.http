@@ -1,0 +1,41 @@
+@domain=https://react-do-server-production.up.railway.app
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjM0ODU0MzY1OGZhODQzMWFmNGM3N2YiLCJ1c2VybmFtZSI6ImtydXNobiIsImlhdCI6MTcxNDcxODAyOX0.ZbwhdE2V4XiRklfNlBmzVlvI_8rLQwJhWnJfxmMQ0IM
+
+###
+
+POST {{domain}}/todos HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "text": "Learn Node.js"
+}
+
+###
+
+POST {{domain}}/todos HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  
+}
+
+###
+
+PUT {{domain}}/todos/66348141619536040f81d0c1 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "text": "Learn Node.js Update",
+  "isDone": true 
+}
+
+###
+
+DELETE {{domain}}/todos/66347fd1cd41a85690f2edd5 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+###

@@ -1,0 +1,23 @@
+@domain=https://react-do-server-production.up.railway.app
+
+###
+
+POST {{domain}}/auth/sign-up HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "krushn",
+  "password": "krushn"
+}
+
+###
+
+POST {{domain}}/auth/sign-in HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "krushn",
+  "password": "krushn"
+}
+
+###
